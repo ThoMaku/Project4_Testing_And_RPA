@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Orders" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="944,2235" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Orders" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="OrderDate" Type="InArgument(s:DateTime)" />
+    <x:Property Name="CustomerID" Type="InArgument(x:Int32)" />
+    <x:Property Name="DeliveryAddress" Type="InArgument(x:String)" />
+    <x:Property Name="Project4_DataTable" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>944,2235</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -148,7 +157,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="484,2009" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2cf61518-a2a7-4413-a7d3-d449f4ab01ed" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="484,2009" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="2cf61518-a2a7-4413-a7d3-d449f4ab01ed" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -185,26 +194,26 @@
                         </OutArgument>
                       </ui:GetRowItem.Value>
                     </ui:GetRowItem>
-                    <ui:FormatValue DisplayName="Format Value" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="FormatValue_1">
+                    <ui:FormatValue DisplayName="Format Value" sap:VirtualizedContainerService.HintSize="388,85" sap2010:WorkflowViewState.IdRef="FormatValue_2">
                       <ui:FormatValue.Format>
                         <ui:DateTimeFormatProvider Pattern="yyyy-MM-dd HH:mm" />
                       </ui:FormatValue.Format>
                       <ui:FormatValue.Value>
                         <InOutArgument x:TypeArguments="ui:GenericValue">
-                          <CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">gvDateTime</CSharpReference>
+                          <CSharpReference x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">gvDateTime</CSharpReference>
                         </InOutArgument>
                       </ui:FormatValue.Value>
                     </ui:FormatValue>
                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Order Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="2cf61518-a2a7-4413-a7d3-d449f4ab01ed" Version="V3">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Orders/Create" CvElementArea="132, 345, 358, 41" CvTextArea="144, 358, 126, 20" CvTextArgument="yyyy/mm/dd --:--" CvType="InputBox" DesignTimeRectangle="133, 347, 356, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT OrderDate'" FullSelectorArgument="&lt;webctrl id='OrderDate' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='OrderDate' tag='INPUT' type='datetime-local' class='form-control' aaname='Order Date' /&gt;" Guid="13e7f757-b129-4636-aa0d-1f4931719691" InformativeScreenshot="3c0ca943da55be5e568095460454ab5b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Orders/Create" CvElementArea="132, 345, 358, 41" CvTextArea="144, 358, 126, 20" CvTextArgument="yyyy/mm/dd --:--" CvType="InputBox" DesignTimeRectangle="133, 302, 356, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT OrderDate'" FullSelectorArgument="&lt;webctrl id='OrderDate' tag='INPUT' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='OrderDate' tag='INPUT' type='datetime-local' class='form-control' aaname='Order Date' /&gt;" Guid="13e7f757-b129-4636-aa0d-1f4931719691" InformativeScreenshot="50ecbd82ca2b6670709d7ef9adf83ead.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Create - EcoPower_Logistics' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CvTextArea="132, 327, 80, 15" CvTextArgument="Order Date" CvType="Text" DesignTimeRectangle="133, 323, 79, 24" ElementType="Text" FriendlyName="'Order Date'" FullSelectorArgument="&lt;webctrl aaname='Order Date' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Order Date' tag='LABEL' type='' class='control-label' check:innerText='Order Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAcCAYAAAAdvIO5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIwSURBVGhD7ZW9TgMxDIB5FQYGHqvqwJN0aN+k0j1KSxlgAYmBgUqtkFiApShcEvsudpzeT90OyJ9kobvexfYX57hyhhomUxGTqYjJVMRkKmIyFTGZiphMRS4nc7Vw1zcLt4bL/4gsMzR+S2JS7eHHkZxL5rZyE1ZrjMtvHJO5d8upVMjGzXyB08rt4M5gzirzzi23cA3sqrsgdegQhPdG9klkxgJKDUfRoyf0wjIDIWfhtwJKMuP0zVZwKcGErOf1tM438S+bArzXHDlBJk4PBsmNklZ4jAsbcUymMAA8Z/sbnsokUqn8c1L3zWllHi0KYM+gML4B4b5YSCskmwB4plkL3+mako66ccMj9cCkEnjOGnEysxwgngllMgu73+Cnl8nsTAyQyaTrIKRxoVGRUj4gyBGmKFKYXNaTryv7vAkn7fTJ5IX6JNI0pclBVHNk0iAyO+rxdDyX1wj/TJM4LlM4/k2UZJ7wzST0lkkLyVCRGUVgT0EU6bHPZNI1jpHIlEe8JU9clCk0FxtBgT02TkEm7Sevv5/MQp8CRCYuzse3ORq9ksAa6bOhYbpueJfl2VWLVspJMuU+eL1xg5lgdvoC4R7b/DrvjGxMJjOCSdKQpqi8Y9gMhBcrFBmFJpGuNUgmW6cOOoEI/V5Oqk02maT2dCBAaBtMeI0o0xiHyVTEZCpiMhUxmYqYTEWIzK/vH/f69u4enl7c/eOzxcBoZHqRXuL+49MdDr9w1+iPc39AnffdrQTjdAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CvTextArea="132, 327, 80, 15" CvTextArgument="Order Date" CvType="Text" DesignTimeRectangle="133, 278, 79, 24" ElementType="Text" FriendlyName="'Order Date'" FullSelectorArgument="&lt;webctrl aaname='Order Date' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Order Date' tag='LABEL' type='' class='control-label' check:innerText='Order Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAcCAYAAAAdvIO5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIwSURBVGhD7ZW9TgMxDIB5FQYGHqvqwJN0aN+k0j1KSxlgAYmBgUqtkFiApShcEvsudpzeT90OyJ9kobvexfYX57hyhhomUxGTqYjJVMRkKmIyFTGZiphMRS4nc7Vw1zcLt4bL/4gsMzR+S2JS7eHHkZxL5rZyE1ZrjMtvHJO5d8upVMjGzXyB08rt4M5gzirzzi23cA3sqrsgdegQhPdG9klkxgJKDUfRoyf0wjIDIWfhtwJKMuP0zVZwKcGErOf1tM438S+bArzXHDlBJk4PBsmNklZ4jAsbcUymMAA8Z/sbnsokUqn8c1L3zWllHi0KYM+gML4B4b5YSCskmwB4plkL3+mako66ccMj9cCkEnjOGnEysxwgngllMgu73+Cnl8nsTAyQyaTrIKRxoVGRUj4gyBGmKFKYXNaTryv7vAkn7fTJ5IX6JNI0pclBVHNk0iAyO+rxdDyX1wj/TJM4LlM4/k2UZJ7wzST0lkkLyVCRGUVgT0EU6bHPZNI1jpHIlEe8JU9clCk0FxtBgT02TkEm7Sevv5/MQp8CRCYuzse3ORq9ksAa6bOhYbpueJfl2VWLVspJMuU+eL1xg5lgdvoC4R7b/DrvjGxMJjOCSdKQpqi8Y9gMhBcrFBmFJpGuNUgmW6cOOoEI/V5Oqk02maT2dCBAaBtMeI0o0xiHyVTEZCpiMhUxmYqYTEWIzK/vH/f69u4enl7c/eOzxcBoZHqRXuL+49MdDr9w1+iPc39AnffdrQTjdAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                           <uix:TargetAnchorable.PointOffset>
-                            <uix:PointOffset Position="BottomRight" X="-24" Y="-20" />
+                            <uix:PointOffset Position="BottomRight" X="-25" Y="-20" />
                           </uix:TargetAnchorable.PointOffset>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
