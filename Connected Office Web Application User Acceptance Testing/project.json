@@ -1,12 +1,11 @@
 {
   "name": "Connected Office Web Application User Acceptance Testing",
-  "projectId": "0974c449-4c43-4682-84a9-bd433e576799",
-  "description": "Blank Process",
+  "projectId": "2906b01e-1efa-4539-a0b7-285f6579a94a",
+  "description": "",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
     "UiPath.Mail.Activities": "[1.20.3]",
-    "UiPath.MicrosoftOffice365.Activities": "2.3.3",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",
     "UiPath.UIAutomation.Activities": "[23.10.0-preview]"
@@ -48,11 +47,11 @@
     "modernBehavior": true,
     "saveToCloud": false
   },
-  "expressionLanguage": "CSharp",
+  "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "16c784f5-9fc3-43fc-beb1-cbe6a1a3c74e",
+      "uniqueId": "ccc93c8e-24bf-41bb-bb8d-8f36e36d9809",
       "input": [],
       "output": []
     }
