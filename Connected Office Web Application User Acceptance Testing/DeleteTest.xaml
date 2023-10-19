@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DeleteTest" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="750,2078" sap2010:WorkflowViewState.IdRef="DeleteTest_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DeleteTest" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="944,2696" sap2010:WorkflowViewState.IdRef="DeleteTest_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -39,6 +39,8 @@
       <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,43 +102,43 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DeleteTest" sap:VirtualizedContainerService.HintSize="760,2287" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DeleteTest" sap:VirtualizedContainerService.HintSize="860,2631" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="698,2176" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="798,2520" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="664,2089" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764,2433" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="602,1978" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="RawValue" ResizeWindow="None" WorkbookPath="C:\Users\Makunyane\Downloads\CMPG 323\CMPG-323-Project-4-35804068\CMPG323 EcoPower Logistics Data.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="764,2655" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="C:\Users\Makunyane\Downloads\CMPG323 EcoPower Logistics Data (1).xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,1709" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="730,2386" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="506,1598" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="668,2275" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1381" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,2058" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="CustomersExtractedData" />
                             </Sequence.Variables>
@@ -145,44 +147,230 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Customers'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="193, 107, 81, 14" CvTextArgument="Customers" CvType="Text" DesignTimeRectangle="186, 94, 95, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Customers'" FullSelectorArgument="&lt;webctrl aaname='Customers' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Customers' tag='A' type='' class='nav-link text-dark' check:innerText='Customers' /&gt;" Guid="b60375c4-fd5c-4eae-8eab-473f182b16c1" InformativeScreenshot="b91ce06a3a2abf630d1c85be0f0d6c14.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                              </uix:NClick.Target>
-                            </uix:NClick>
-                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[CustomersExtractedData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Details Url' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delete Url' ReferenceName='Column2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
-                              <uix:NExtractData.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="125, 297, 1116, 533" DesignTimeScaleFactor="1" FriendlyName="'Mr Christina'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="dba6e957-02f8-44b0-ac1e-e36d8d5a3b58" InformativeScreenshot="a5a7598438b3566ebcc80b011301bb11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                              </uix:NExtractData.Target>
-                            </uix:NExtractData>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CustomersExtractedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,872" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                              <ui:ForEachRow.Body>
-                                <ActivityAction x:TypeArguments="sd:DataRow">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                                  </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,686" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentRow(&quot;Details Url&quot;).ToString()]" Version="V3" />
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
-                                      <uix:NClick.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Details/123665257" CvTextArea="172, 426, 81, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="172, 423, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="3c91cdc8-6d8e-4cfa-9eda-c864602376ce" InformativeScreenshot="2dee89012c7552bbaf912a5ffbb214d0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Details - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                      </uix:NClick.Target>
-                                    </uix:NClick>
-                                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentRow(&quot;Delete Url&quot;).ToString()]" Version="V3" />
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
-                                      <uix:NClick.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Delete/123665257" CvElementArea="131, 461, 74, 40" CvTextArea="145, 474, 47, 15" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="133, 463, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="26c95224-56ad-4443-b411-46319e9245d0" InformativeScreenshot="50a4e766d5344a16f228bf6c90514864.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                      </uix:NClick.Target>
-                                    </uix:NClick>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEachRow.Body>
-                            </ui:ForEachRow>
+                            <Sequence DisplayName="DeleteOrderDetails" sap:VirtualizedContainerService.HintSize="572,81" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="sd:DataTable" Name="OrderDetailsExtractedData" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Order Details'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="437, 106, 101, 15" CvTextArgument="Order Details" CvType="Text" DesignTimeRectangle="430, 94, 115, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Order Details'" FullSelectorArgument="&lt;webctrl aaname='Order Details' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Order Details' tag='A' type='' class='nav-link text-dark' check:innerText='Order Details' /&gt;" Guid="44729689-2628-4af3-9eaf-6fbc31d634b6" InformativeScreenshot="8fed57835b2e54c1ddbca85ce51d9608.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[OrderDetailsExtractedData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Details Url' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delete Url' ReferenceName='Column2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="125, 297, 1116, 2337" DesignTimeScaleFactor="1" FriendlyName="'0 0'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="02957cd6-72c1-43a5-9136-55570aa30fc2" InformativeScreenshot="0962a7fa5b6c844a0cfeacf535c655dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                              </uix:NExtractData>
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[OrderDetailsExtractedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1071" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,885" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[CurrentRow(&quot;Details Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Details/19402" CvTextArea="172, 426, 81, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="172, 423, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="0f788cb6-be25-402e-872b-9d8ff0d2a8c3" InformativeScreenshot="7b16732d681c6c28492894a286ab1b4c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Details - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[CurrentRow(&quot;Delete Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/OrderDetails/Delete/19402" CvElementArea="131, 461, 74, 40" CvTextArea="145, 474, 47, 15" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="133, 463, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="399b60d5-5a26-42a2-9a74-70d3a0d85e32" InformativeScreenshot="ca7eb2d1025e4340908895606cfd5871.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Order Details&quot;).Cell(&quot;H2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;True&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:WriteCellX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                              </ui:ForEachRow>
+                            </Sequence>
+                            <Sequence DisplayName="DeleteOrders" sap:VirtualizedContainerService.HintSize="572,81" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="sd:DataTable" Name="OrdersExtractedData" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Orders'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="288, 106, 53, 15" CvTextArgument="Orders" CvType="Text" DesignTimeRectangle="281, 94, 67, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Orders'" FullSelectorArgument="&lt;webctrl aaname='Orders' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Orders' tag='A' type='' class='nav-link text-dark' check:innerText='Orders' /&gt;" Guid="451416be-b80b-4adc-a135-20baf357c4df" InformativeScreenshot="d9eba07d66a36659403057821330ee0d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[OrdersExtractedData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Details Url' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delete Url' ReferenceName='Column3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="125, 297, 1116, 574" DesignTimeScaleFactor="1" FriendlyName="'11/20/2016 12:00:00'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="87b9b734-a0ca-43d3-85b5-22dd3a0f5d06" InformativeScreenshot="bd338ca60735d445e304ca85e420fe9a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                              </uix:NExtractData>
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[OrdersExtractedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1071" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,885" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_5" Url="[CurrentRow(&quot;Details Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Orders/Details/2136060" CvTextArea="172, 394, 81, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="172, 391, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="adc4812d-4eba-4d42-88a7-76900ffd7559" InformativeScreenshot="bb9a1f4486a361346bd24b610e58e01b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Details - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_6" Url="[CurrentRow(&quot;Delete Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Orders/Delete/2136060" CvElementArea="131, 429, 75, 40" CvTextArea="145, 442, 47, 15" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="133, 431, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="801d8c49-c674-4e28-957a-96ce37c99a08" InformativeScreenshot="fd142d44c11dd03c184efe7f4d98d745.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Orders&quot;).Cell(&quot;G2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;True&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:WriteCellX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                              </ui:ForEachRow>
+                            </Sequence>
+                            <Sequence DisplayName="DeleteCustomer" sap:VirtualizedContainerService.HintSize="572,81" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Customers'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="193, 107, 81, 14" CvTextArgument="Customers" CvType="Text" DesignTimeRectangle="186, 94, 95, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Customers'" FullSelectorArgument="&lt;webctrl aaname='Customers' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Customers' tag='A' type='' class='nav-link text-dark' check:innerText='Customers' /&gt;" Guid="b60375c4-fd5c-4eae-8eab-473f182b16c1" InformativeScreenshot="b91ce06a3a2abf630d1c85be0f0d6c14.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[CustomersExtractedData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Details Url' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delete Url' ReferenceName='Column2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="125, 297, 1116, 533" DesignTimeScaleFactor="1" FriendlyName="'Mr Christina'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="dba6e957-02f8-44b0-ac1e-e36d8d5a3b58" InformativeScreenshot="a5a7598438b3566ebcc80b011301bb11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                              </uix:NExtractData>
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CustomersExtractedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1071" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,885" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_7" Url="[CurrentRow(&quot;Details Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Details/123665257" CvTextArea="172, 426, 81, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="172, 423, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="3c91cdc8-6d8e-4cfa-9eda-c864602376ce" InformativeScreenshot="2dee89012c7552bbaf912a5ffbb214d0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Details - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_8" Url="[CurrentRow(&quot;Delete Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Delete/123665257" CvElementArea="131, 461, 74, 40" CvTextArea="145, 474, 47, 15" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="133, 463, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="26c95224-56ad-4443-b411-46319e9245d0" InformativeScreenshot="50a4e766d5344a16f228bf6c90514864.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Customers&quot;).Cell(&quot;H2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[&quot;True&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:WriteCellX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                              </ui:ForEachRow>
+                            </Sequence>
+                            <Sequence DisplayName="DeleteProducts" sap:VirtualizedContainerService.HintSize="572,1580" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="sd:DataTable" Name="ProductsExtractedData" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Products'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/" CvTextArea="355, 106, 68, 15" CvTextArgument="Products" CvType="Text" DesignTimeRectangle="348, 94, 82, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Products'" FullSelectorArgument="&lt;webctrl aaname='Products' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Products' tag='A' type='' class='nav-link text-dark' check:innerText='Products' /&gt;" Guid="51b40a59-5b35-4bab-84dc-ce4c656365d9" InformativeScreenshot="ab99a19d89f8116179b723d2f1e01e9a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home Page - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ProductsExtractedData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Details Url' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Delete Url' ReferenceName='Column3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' text='|&amp;#xA;                 |' idx='1' /&gt;&lt;webctrl tag='a' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="125, 297, 1116, 1599" DesignTimeScaleFactor="1" FriendlyName="'Plantronics Cordless Ph…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="1d0af739-59cf-4f67-a1a0-f7a07e277468" InformativeScreenshot="a3192aaceb8802f80364b5ed6255d3d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Index - EcoPower_Logistics' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                              </uix:NExtractData>
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ProductsExtractedData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1071" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,885" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_9" Url="[CurrentRow(&quot;Details Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Products/Details/10024447" CvTextArea="172, 394, 81, 15" CvTextArgument="Back to List" CvType="Text" DesignTimeRectangle="172, 391, 80, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl aaname='Back to List' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Back to List' tag='A' type='' class='' check:innerText='Back to List' /&gt;" Guid="abc96dc4-6a82-410d-9abc-23e1c2e458f7" InformativeScreenshot="f0c0cc2b104e139c33f7c46098bb5f1b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Details - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_10" Url="[CurrentRow(&quot;Delete Url&quot;).ToString()]" Version="V3" />
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Delete'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f139e39-645d-4094-87f8-5b1fca4dec5f" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Products/Delete/10024447" CvElementArea="131, 429, 75, 40" CvTextArea="145, 442, 47, 15" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="133, 431, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="2f3eb015-280e-419e-8448-b1b614d39903" InformativeScreenshot="949e88d8ed28406a3929b9ab940e6aa6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ueab:WriteCellX AutoIncrementRow="True" Cell="[Excel.Sheet(&quot;Products&quot;).Cell(&quot;G2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[&quot;True&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:WriteCellX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                              </ui:ForEachRow>
+                            </Sequence>
                           </Sequence>
                         </ActivityAction>
                       </uix:NApplicationCard.Body>
